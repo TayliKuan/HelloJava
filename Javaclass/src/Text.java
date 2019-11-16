@@ -142,7 +142,7 @@ System.out.println("a,b,e,f"
 double F, C;
     System.out.println("選擇你要轉換的溫度");
     System.out.println("攝氏C 轉華氏F 請輸入1");
-    System.out.println("華氏C 轉攝氏C 請輸入2 ");
+    System.out.println("華氏F 轉攝氏C 請輸入2 ");
 
 java.util.Scanner sc = new java.util.Scanner(System.in);//allow user to input
 double input = sc.nextDouble();
