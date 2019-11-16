@@ -140,10 +140,23 @@ System.out.println("a,b,e,f"
 //溫度計寫法ˇ
 //F=9/5C+32
 double F, C;
-C=22;
-F=(C*9/5)+32;//因為C是DOUBLE 9會是DOUBLE
+
+System.out.print("請輸入攝氏溫度C 進行換算>>>");
+java.util.Scanner sc = new java.util.Scanner(System.in);//allow user to input
+double inputC = sc.nextDouble();
+
+F = inputC*9/5+32;//因為C是DOUBLE 9會是DOUBLE
 //(9/5*C)+32 是不能的 因為9/5是1 整數
-F=((double)9/5*C+32);
-System.out.println(F);
+//F=((double)9/5*C+32);
+
+//System.out.printf("F = %.2f \n",F);//要兩位數小數點 printf %.3f會是.三位 f是浮點數
+//System.out.printf("F = %.2f %.3f \n",F,F);
+System.out.printf("F = %.2f  - 華氏F \n",F,F);
+
+System.out.print("請輸入華氏溫度F 進行換算>>>");
+//java.util.Scanner sc = new java.util.Scanner(System.in);//allow user to input
+double inputF = sc.nextDouble();
+C=(inputF-32)*((double)5/9);
+System.out.printf("C = %.2f  - 攝氏C \n",C);
 }
 }
