@@ -10,8 +10,7 @@
  */
 public class temperature {
     public static void main(String[]text){
-//溫度計寫法
-//F=9/5C+32
+//溫度轉換計寫法
         double F, C;
         System.out.println("選擇你要轉換的溫度");
         System.out.println("攝氏C 轉華氏F 請輸入1");
