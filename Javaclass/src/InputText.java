@@ -12,10 +12,14 @@ public class InputText {
     public static void main (String[]args)
     {
         java.util.Scanner sc = new java.util.Scanner(System.in);
-        System.out.println("請輸入姓名");
+        System.out.println("請輸入中文姓名");
         System.out.print("name=");
-        String name = sc.next();
+        String name = sc.nextLine();//nextLine() 是判斷 你有送出 Enter 代表輸入結束
         
+        System.out.println("請輸入英文名");
+        System.out.print("name=");
+        String name2 = sc.next();//next()這個函數會抓enter之前的值
+        //所以原本next()跟nextLine()對調 nextLine()會直接拿走next()留下來的enter 繼續往下走
         System.out.println("請輸入年齡"); 
         System.out.print("age=");
         int age = sc.nextInt();
