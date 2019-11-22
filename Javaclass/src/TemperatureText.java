@@ -8,7 +8,7 @@
  *
  * @author 小官
  */
-public class temperature {
+public class TemperatureText {
     public static void main(String[]text){
 //溫度轉換計寫法
         double F, C;
