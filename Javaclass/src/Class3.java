@@ -102,8 +102,35 @@ public class Class3 {
         System.out.println("Thanks for calling!");
         }
     }*/
+
+/*function 呼叫
 public class Class3 {
+    static void sayHello(int x,char c){//要加static才可以呼叫 這動作要在main外面
+        System.out.println("Hi,how are you ?");
+        int i= 30; {
+            System.out.println("In Test,i is "+i);
+            System.out.println("In Test,i is "+x);//main 一定要給值
+            for (int j = 1; j < 10; j++) {
+                System.out.print(c);
+        }
+        }System.out.println("");
+    }
     public static void main(String[] args) {
-        
+        int i =20;
+        System.out.println("In main,i is "+i);
+        sayHello(7,'@');
+        System.out.println("In main,after is "+i);
+        sayHello(5,'!');
+        }
+    
+    }*/
+public class Class3 {
+    static int sayHello(){//要加static才可以呼叫 這動作要在main外面
+            return 8;
+        }
+public static void main(String[] args) {
+        int result =sayHello();
+        System.out.println(result);
         }
     }
+//回傳 東西 int
