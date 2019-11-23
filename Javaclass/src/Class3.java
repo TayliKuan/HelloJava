@@ -90,7 +90,18 @@ public class Class3 {
             System.out.println(num+"is odd");
         }
     }
-*/
+*//*while 練習 輸入 直到9離開
+public class Class3 {
+    public static void main(String[] args) {
+        java.util.Scanner sc=new java.util.Scanner(System.in);
+        int number;
+        do{
+            System.out.println("Pls enter 1)A,2)B,9)Exit");
+            number= sc.nextInt();
+        }while(number !=9);
+        System.out.println("Thanks for calling!");
+        }
+    }*/
 public class Class3 {
     public static void main(String[] args) {
         
