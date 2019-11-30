@@ -35,8 +35,8 @@ public class Class3 {
     }
 }
 */
-/*九九
-public class Class3 {
+//九九
+/*public class Class3 {
     public static void main(String[] args) {
         //for (int  i=1 ; i<11;i++) {
            // System.out.print( i+" ");}
@@ -53,8 +53,8 @@ public class Class3 {
         }//but三位數不行
     }
 }*/
-/*99三角
-public class Class3 {
+//99三角 j<=i
+/*public class Class3 {
     public static void main(String[] args) {
         //for (int  i=1 ; i<11;i++) {
            // System.out.print( i+" ");}
@@ -70,11 +70,11 @@ public class Class3 {
         System.out.println("");
         }//but三位數不行
     }
-}
-*/
+}*/
+
 //if簡寫
-/*
-public class Class3 {
+//列出你印的數字
+/*public class Class3 {
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.println("請輸入想要列印的次數");
@@ -88,10 +88,11 @@ public class Class3 {
             System.out.println(num+"is even");
         else
             System.out.println(num+"is odd");
-        }
-    }
-*//*while 練習 輸入 直到9離開
-public class Class3 {
+     }
+}*/
+        
+//*while 練習 輸入 直到9離開
+/*public class Class3 {
     public static void main(String[] args) {
         java.util.Scanner sc=new java.util.Scanner(System.in);
         int number;
@@ -124,7 +125,7 @@ public class Class3 {
         }
     
     }*/
-public class Class3 {
+/*public class Class3 {
     static int sayHello(){//要加static才可以呼叫 這動作要在main外面
             return 8;
         }
@@ -133,4 +134,20 @@ public static void main(String[] args) {
         System.out.println(result);
         }
     }
-//回傳 東西 int
+//回傳 東西 int*/
+/*
+public class Class3 {
+public static void main(String[] args) {
+      int x=11;
+      int r=1;
+      r+=x;
+      if((x>4)&&(x<10)){
+        r+=2*x;
+      }else if(x<=4){
+          r+=3*x;
+      }else{
+      r+=(4*x);
+      }
+      System.out.println("r= "+r);
+    }
+}*/
