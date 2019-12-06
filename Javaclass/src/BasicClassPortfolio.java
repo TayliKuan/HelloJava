@@ -10,7 +10,7 @@
  */
 public class BasicClassPortfolio {
     public static void main(String[] args) {
-    /*  System.out.println("Q1:九九乘法表-----------------------------");
+    System.out.println("Q1:九九乘法表-----------------------------");
         for (int i = 1; i < 10; i++) { 
             for (int j = 1; j < 10; j++) {
                 if(i*j<10){//對齊
@@ -67,52 +67,56 @@ public class BasicClassPortfolio {
                 System.out.println("不是水仙花數");
         System.out.println("");
 
-*/
-        System.out.println("Q5:樂透產生器，產生六個 介於 1~42的數字 而且不重覆------");
-        int[]data = new int[6];
-        for (int i = 1; i < data.length; i++) {
-             int luckyNum = (int)(Math.random()*42+1);
-             if (luckyNum==luckyNum) {//如果兩數相等 再亂數一次
-                     int a=(int)(Math.random()*42+1); 
-                     //break;
+    
+        System.out.println("Q5 Q6:樂透，產生六個介1~42的數字,不重覆,從小到大依序印出------");
+        //使用陣列 把六個隨機數放進去不重複 逐數比對 如果重複 就退回迴圈再亂數一次
+        int[]luckyNum = new int[6];
+        for (int i = 0; i < luckyNum.length; i++) {
+            luckyNum[i] = (int)(Math.random()*42+1);
+            for (int j = 0; j < i; j++) {
+                if(luckyNum[j]==luckyNum[i]) {
+                    i--;
+                    break;
                 }
-            data[i]=luckyNum;
-            System.out.println(data[i]);
-            //使用陣列 把六個隨機數放進去
+            }   
         }
-//        for (int i = 1; i < 7; i++) {
-//            int luckyNum=(int)(Math.random()*42+1);//KEY *42就是0-41
-//            //前面取出六個數 接下來逐數比對
-//            for (int j = 1; j < i; j++) {//j<i 因為已經重複比過一次了 自己不用比對 用九九乘法三角型概念
-//                if (luckyNum==luckyNum) {//如果兩數相等 再亂數一次
-//                   int a=(int)(Math.random()*42+1); 
-//                   break;
-//                }
-//                
-//            }
-//        System.out.println("樂透號碼=" + luckyNum);}
-//        System.out.println("");
-       
-        
-//        System.out.println("Q6:將樂透號碼的陣列 依從小到大的排列方式 依序印出-------");
-//        int[]data = new int[6];
-//        for (int i = 1; i < data.length; i++) {
-//            int luckyNum = (int)(Math.random()*42+1);
-//        data[i]=luckyNum;//使用陣列 把六個隨機數放進去
-//        }
-//        for (int i = 0; i < 6; i++) {//用九九乘法三角型概念
-//            for (int j = i+1; j < 6; j++) {//以i為定點 自己不用比對+1
-//                if (data[i] > data[j]){
-//                    int box;
-//                    box = data[j];
-//                    data[j] = data[i];
-//                    data[i] = box;
-//                }
-//            }
-//        }
-//        for (int luckyNum : data) {//印出陣列裡面的數字
-//            System.out.println(luckyNum);
-//        }
+        //由小到大排列 如果左邊比右邊大 數字交換
+        for (int i = 0; i < luckyNum.length; i++) {//用九九乘法三角型概念
+            for (int j = i+1; j < luckyNum.length; j++) {//以i為定點 自己不用比對+1
+                if (luckyNum[i] > luckyNum[j]){
+                      int box;
+                      box = luckyNum[j];
+                      luckyNum[j] = luckyNum[i];
+                      luckyNum[i] = box;
+                  }
+              }
+           }
+        //印出陣列
+        System.out.print("樂透號碼 = ");
+        for (int  lottery: luckyNum) {//印出陣列裡面的數字
+            System.out.print(lottery + ",");
+        }
+        System.out.println("");
+
+        System.out.println("Q7:猜大小，執行後先產生一個答案，讓使用者輸入數字，再依大小回覆給使用者，方便參考--------------");
+            int bingoNum=(int)(Math.random()*99+1);
+            System.out.println("猜猜賓果遊戲→請輸入1-100的數字>");
+            int bingoGuess = sc.nextInt();
+            for (int i = 1;i<2; i++) {//只要執行一次
+                if(bingoNum==bingoGuess){
+                    System.out.println("YOU R BINGO!!!");
+                }else if(bingoNum>bingoGuess){
+                        System.out.println("你猜得太小了 再猜一次>");
+                        bingoGuess = sc.nextInt();
+                        i--;//回去再做一次
+                }else if(bingoNum<bingoGuess){
+                        System.out.println("你猜的太大了 再猜一次>");
+                        bingoGuess = sc.nextInt();
+                        i--;//回去再做一次
+            }  
+        }
     }
-}
+ }
+
+
 
