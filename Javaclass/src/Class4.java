@@ -88,22 +88,22 @@ public class Class4 {
     //int [][]xyz=new int[2][];
    // xyz[0]=new int[3];
     //xyz[1]=new int[5];
-//    String river = "Mississippi";
-//        System.out.println("river.length()"+river.length());//印出Mississippi長度
-//        System.out.println(river.charAt(2));//字元第幾個字是甚麼 從0開始
-//        System.out.println(river.indexOf("M"));//索引位置 如果找不到 ex 輸入a 就傳-1 取出字串中你要的字
-//        System.out.println(river.lastIndexOf("s"));//右邊開始
-//        System.out.println(river.replace("s", "$"));//替代
-//        System.out.println(river.substring(2));//前面從2開始印
-//        System.out.println(river.substring(2, 5));//印出從2開始不包含5
+    String river = "Mississippi";
+        System.out.println("river.length()"+river.length());//印出Mississippi長度
+        System.out.println(river.charAt(2));//字元第幾個字是甚麼 從0開始
+        System.out.println(river.indexOf("M"));//索引位置 如果找不到 ex 輸入a 就傳-1 取出字串中你要的字
+        System.out.println(river.lastIndexOf("s"));//右邊開始
+        System.out.println(river.replace("s", "$"));//替代
+        System.out.println(river.substring(2));//前面從2開始印
+        System.out.println(river.substring(2, 5));//印出從2開始不包含5
         
-//求一個名字 FRANK 要印出KNAEF
-java.util.Scanner sc = new java.util.Scanner(System.in);
-        System.out.println("請輸入英文姓名");
-        System.out.print("name=");
-        String name = sc.nextLine();
-        System.out.println(name.length());
-        //用長度先判斷 再來用CharAt 一個一個從後面開始接著印
-        //如果是@ 用indexod 找
-       
+////求一個名字 FRANK 要印出KNAEF
+//java.util.Scanner sc = new java.util.Scanner(System.in);
+//        System.out.println("請輸入英文姓名");
+//        System.out.print("name=");
+//        String name = sc.nextLine();
+//        System.out.println(name.length());
+//        //用長度先判斷 再來用CharAt 一個一個從後面開始接著印
+//        //如果是@ 用indexod 找
+//       
     }}//未解

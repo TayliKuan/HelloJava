@@ -44,17 +44,17 @@ public class Class3hw {
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.println("請輸入任一數字 判斷此數為幾位數");
-        int enternum = sc.nextInt();//固定
+        int enterNum = sc.nextInt();//固定
         int a=1;//變數 /10判斷 再加一位回來
-            if(enternum/10!=0){//輸入值不等於0
-                while(enternum/10!=0){
-                enternum=enternum/10;//以除以10判斷有多少位數
-                a=a+1;}//除以10會少一位 要加一位回來
-                System.out.println("此數為"+a+"位數");
-            }else if(enternum/10==0){//輸入值為個位數/10一定為0
-            System.out.println("此數為個位數");
+            if(enterNum/10!=0){//輸入值不等於0
+                while(enterNum/10!=0){
+                    enterNum=enterNum/10;//以除以10判斷有多少位數
+                    a=a+1;}//除以10會少一位 要加一位回來
+                    System.out.println("此數為"+a+"位數");
+            }else if(enterNum/10==0){//輸入值為個位數/10一定為0
+                System.out.println("此數為個位數");
         }
-        
+        //EX 257  257/10=25  25/10=2  2/10=0 很直覺
     }
 } 
         

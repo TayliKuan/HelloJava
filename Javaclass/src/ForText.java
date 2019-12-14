@@ -36,6 +36,7 @@ public class ForText {
         for (int  i=1;  i<11;  i++) {
             System.out.print( i*10-5+" ");}
             System.out.print("\n");
+            //i=5 ;i<96 ;i=10
         
         for (int  i=10;  i>0 && i<11;  i--) {
             System.out.print( i*10-5+" ");}
