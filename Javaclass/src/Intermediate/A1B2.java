@@ -4,7 +4,7 @@ package Intermediate;
 public class A1B2{
     public static void main(String[] args) {
         
-        //印出四位亂數 且數字不重複
+        //印出四位亂數 且數字不重複  方便驗證
         String Ans = "";
         for (int i = 0; i < 4; i++) {
             Ans = Ans + String.valueOf((int)(Math.random()*10));
