@@ -1,4 +1,4 @@
-public class Javaclass{
+public class Class1{
 	public static void main(String[]text){
 boolean b=true;
 b=false;

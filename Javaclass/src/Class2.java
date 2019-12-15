@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package javaclass;
+
 
 /**
  *
  * @author 小官
  */
-public class newClass {
+public class Class2 {
 public static void main(String[]text){
 /*boolean b=true;
 b=false;
