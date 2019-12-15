@@ -1,3 +1,3 @@
-# HelloJava This is a test1 
-this is test2
-other test
+# HelloJava  
+放上課堂筆記
+還有課堂作業
