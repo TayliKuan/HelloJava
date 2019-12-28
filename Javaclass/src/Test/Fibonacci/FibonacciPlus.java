@@ -4,18 +4,20 @@ public class FibonacciPlus {
     public static void main(String[] args) {
         System.out.print("請輸入欲列印的數列索引值>");
         Scanner sc = new Scanner(System.in);
-        int x=sc.nextInt();
-        int n0=0;
-        int n1=1;
-        int n2=0;//給初始值
-        //費式
-        //System.out.print("0,");//要印出費式的話
-            for (int i = 1; i <= x; i++) {
-                n0=n1;
-                n1=n2;
-                n2=n1+n0;
-                //System.out.print(n2+",");////要印出費式的話
-        }
-            System.out.println("答案是:"+n2);
+        int userinput=sc.nextInt();
+        System.out.println(f(userinput));
     }
+    static int f(int userinput){
+    int r=0;
+        if (userinput==0) {
+            r=0;
+        }
+        else if (userinput==1) {
+           r=1;
+        }
+        else{
+        r=f(userinput-1)+f(userinput-2);
+        }
+    return r;
+    }    
 }

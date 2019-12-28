@@ -5,6 +5,8 @@ import Appx.shape.Cylinder;
 import java.awt.Point;
 import javax.swing.JFrame;
 import Appx.YourPoint;
+import Appx.shape.Circle;
+import Appx.shape.MyPoint;
 
 
 class Car{//類別 類別名稱
@@ -22,19 +24,56 @@ class Car{//類別 類別名稱
     }//irent 股票
 
 public class Demo {
+    
+    static void test(MyPoint p){
+    //後面test(new MyPoint());等於p=new Mypoint();
+    //後面test(new Circle());等於p=new Cricle();
+    p.print();
+    if(p instanceof Circle){
+        System.out.println("yes,is a circle");
+    }else{
+        System.out.println("not a circle");
+    }
+    }
+    
+    
     public static void main(String[] args) {
-          
-       new YourPoint();//不能存到YourPoint(int i)因為是defalult等級
+        MyPoint p1 = new MyPoint();
+        System.out.println(p1);
+        //MyPoint p2 = new Circle();
+        //System.out.println(p2);
         
-       Cylinder cy1 = new Cylinder(1,2,3,4);
-       cy1.print();
-
-       cy1.setH(10);
-
-       cy1.print();//印出圓的資訊 x,y,r,h
-       cy1.printArea();//印出面積
-       cy1.printVolume();//印出體積
-           
+        //Circle cc=(Circle)p1;//強制轉換 編譯器會過 編譯器相信你P1有三個空間XYR
+        //cc.print();//但答案會噴掉 因為P1其實只是MYPOINT 只有兩個空間
+        
+       //MyPoint p1=new Circle();
+       //p1.print();
+       
+        test(new MyPoint());//呼叫函式給值
+        test(new Circle());//
+        test(new Cylinder());
+        
+//        System.out.println("before>"+MyPoint.getCount());//static count 一 開始就存在了 所以沒有new也可以拿來用
+//        //MyPoint.getCount()=1; 
+//        System.err.println("after>"+MyPoint.getCount());
+//        
+//       //new YourPoint();//不能存到YourPoint(int i)因為是defalult等級
+//        
+//       MyPoint p1 = new MyPoint();
+//       
+//       System.out.println(p1.getCount());
+//       MyPoint p2 = new MyPoint();
+//       System.out.println(p2.getCount());
+//       Cylinder cy1 = new Cylinder(1,2,3,4);
+//       cy1.print();
+//       MyPoint.getCount();//會提示 因為資料是mypoint的 但是如果new的話 會過但是不建議 因為是不是NEW出來的資料 一樣會去同一個靜態的地方
+//////
+//       cy1.setH(10);
+//
+//       cy1.print();//印出圓的資訊 x,y,r,h
+//       cy1.printArea();//印出面積
+//       cy1.printVolume();//印出體積
+//           
 //        Circle c0 = new Circle();
 //        c0.print();//初始
 //        c0.setX(5);
@@ -74,10 +113,8 @@ public class Demo {
 //    test.move(3,4);
 //        System.out.println(test);
 //        
-//    JFrame jf = new JFrame("Hello World");
-//    jf.setVisible(true);
-//    //一個網頁視窗
-//    jf.setSize(300, 300);//像素
+//    
+
 //    jf.setAlwaysOnTop(true);//在最上面
 //    jf.setEnabled(true);//不能拖 不能移動
 //    jf.setOpacity(0.5f);//透明度 不能用

@@ -27,10 +27,11 @@ public class Circle extends MyPoint{
        r = i;  
     }   
     public void print(){
-        System.out.println("Circle print()");
-        //System.out.println("("+getX()+","+getY()+")"+"r="+getR());//數學結果優先運算 再接左邊字串
-        super.print();//呼叫父類別 的print() 一樣的程式不用再寫一遍
-        System.out.print(" r="+getR());
+        System.out.println(toString());
+
+    }
+    public String toString(){
+    return super.toString()+"r="+getR();
     }
     public void printArea(){
     System.out.println("Circle Area="+getArea());
@@ -39,4 +40,5 @@ public class Circle extends MyPoint{
     public double getArea(){
     return pi*getR()*getR();//包裝起公式 retuen 不回傳void
     }
+    
 }

@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.print("請輸入欲列印的數列索引值>");
         Scanner sc = new Scanner(System.in);
-        int userimput=sc.nextInt();
-        Fibonacci f=new Fibonacci(userimput);
-        f.getAns();
+        int userinput=sc.nextInt();
+        Fibonacci F=new Fibonacci(userinput);
+        System.out.println(F.f(userinput));
     }
 }

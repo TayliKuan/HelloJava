@@ -23,6 +23,9 @@ public class Cylinder extends Circle{
     super(x,y,r);
         setH(h);
 }
+        public Cylinder(){
+        setH(h);
+}
  
     public void print(){
     super.print();

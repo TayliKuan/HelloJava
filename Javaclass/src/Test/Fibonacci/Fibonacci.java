@@ -10,37 +10,30 @@ package Test.Fibonacci;
  * @author 小官
  */
 public class Fibonacci {
-    int n0=0;
-    int n1=1;
-    int n2=0;//給初始值
-    int userImput;
-    
-    public Fibonacci(int userImput){
-     this.userImput=userImput;
+    int userinput;
+    public Fibonacci(int userinput){
+        this.userinput=userinput;
     }
 
-    public int getUserImput() {
-        return userImput;
+    public int getUserinput() {
+        return userinput;
     }
 
-    public void setUserImput(int userImput) {
-        this.userImput = userImput;
+    public void setUserinput(int userinput) {
+        this.userinput = userinput;
     }
     
-    public void getAns(){
-        if (userImput==0) {
-            System.out.println("f("+userImput+")="+0);    
+    public  int f(int userinput){
+    int r=0;
+        if (userinput==0) {
+            r=0;
         }
-        else if (userImput==1) {
-            System.out.println("f("+userImput+")="+1);
+        else if (userinput==1) {
+           r=1;
         }
-        else {
-            for (int i = 1; i <= userImput; i++) {
-                n0=n1;
-                n1=n2;
-                n2=n1+n0;
-            }
-            System.out.println("f("+userImput+")="+n2);
+        else{
+        r=f(userinput-1)+f(userinput-2);
         }
+        return r;
     }
-}    
+}

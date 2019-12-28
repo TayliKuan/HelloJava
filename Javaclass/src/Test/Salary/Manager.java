@@ -17,9 +17,16 @@ public class Manager extends Employee{
     double lunchAllowance=1800;
     double majobAllowance=3000;
 
-    public void managerSalary(){
-        super.data();
-        System.out.println("Manager Salary");
-        System.out.println("當月薪資:"+(grtOvertimePay()+getSalary()+lunchAllowance+majobAllowance));
+    @Override
+    public double overPay(){
+         overtimePay=getSalary()/240*1.8*getOvertimeHour();
+         return overtimePay;
+    }
+    
+    @Override
+    public void Salary(){
+        super.BasicData();
+        System.out.print("當月薪資:");
+        System.out.println((int)overPay()+(int)getSalary()+(int)lunchAllowance+(int)majobAllowance);
     } 
 }

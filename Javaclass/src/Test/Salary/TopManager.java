@@ -16,13 +16,17 @@ public class TopManager extends Manager{
     }
     double topjobAllowance = 5000;
     double transportation = 2000;
-
-    public TopManager() {
-        super(null, null, null, null, null, 0, 0);
+    
+    @Override
+    public double overPay(){
+    overtimePay=getSalary()/240*2*getOvertimeHour();
+    return overtimePay;
     }
-    public void TopSalary(){
-    super.data();
-        System.out.println("Top Manager Salary");
-    System.out.println("當月薪資:"+(grtOvertimePay()+getSalary()+lunchAllowance+topjobAllowance+transportation));
+   
+    @Override
+    public void Salary(){
+        super.BasicData();
+        System.out.print("當月薪資:");
+        System.out.println((int)overPay()+(int)getSalary()+(int)lunchAllowance+(int)topjobAllowance+(int)transportation);
     }
 }
