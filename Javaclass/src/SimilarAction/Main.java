@@ -3,15 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JF;
+package SimilarAction;
 
+import JF.MyForm;
+import JF.MyForm;
+import SimilarAction.Flyable;
+import SimilarAction.Flyable;
 import SimilarAction.Flyable;
 import javax.swing.JFrame;
 
 
 public class Main  {
     public static void main(String[] args) {
-        MyForm mf = new MyForm();
+        MyCar mc = new YourCar(){};
+        mc.print();
+        //MyForm mf = new MyForm();
         //Flyable b=new Bird();
         //testFly(new Bird());
         //testFly(new AirPlane());
