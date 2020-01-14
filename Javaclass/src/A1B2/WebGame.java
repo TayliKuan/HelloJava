@@ -7,6 +7,7 @@ package A1B2;
 import A1B2.Demo1A2B;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author 小官
@@ -19,15 +20,15 @@ String Guess=jTextField1.getText();
 ///檢查長度
 boolean checkLength=Demo1A2B.checkLength(Guess);
     if (checkLength==false) {
-        JOptionPane.showMessageDialog(null, "請輸入四位數字");
+        JOptionPane.showConfirmDialog(null, "請輸入四位數字");
     } else {
         boolean checkAllisNum=Demo1A2B.checkAllisNum(Guess);
         if (checkAllisNum==false) {
-            JOptionPane.showConfirmDialog(null, "只能輸入數字");
+            JOptionPane.showMessageDialog(null, "只能輸入數字");
         } else {
-            boolean checkSameNum=Demo1A2B.checkAllisNum(Guess);
+            boolean checkSameNum=Demo1A2B.checkSameNum(Guess);
             if (checkSameNum==false) {
-                JOptionPane.showConfirmDialog(null, "數字不能重複");
+                JOptionPane.showMessageDialog(null, "數字不能重複");
             } else {
             }
         }

@@ -33,7 +33,7 @@ public class Demo1A2B {
     }
 
     public static boolean checkLength(String Guess) {
-        if (Guess.length() > 4 && Guess.length() < 4) {
+        if (Guess.length()!=4) {
             return false;
         } else {
             return true;
@@ -59,10 +59,11 @@ public class Demo1A2B {
 
     public static boolean checkSameNum(String Guess) {
         boolean checkSameNum = true;
-
+        //int a=0;
         for (int i = 0; i < 3; i++) {
             for (int j = i + 1; j < 4; j++) {
                 if (Guess.charAt(i) == Guess.charAt(j)) {
+                    //a++;
                     checkSameNum = false;
                 }
             }
