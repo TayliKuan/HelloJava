@@ -8,8 +8,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 //outside class
 //class MyAction implements ActionListener{
@@ -208,9 +210,19 @@ public class MyForm extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuItem2.setText("新增檔案");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("存檔");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setText("結束");
@@ -298,6 +310,25 @@ public class MyForm extends javax.swing.JFrame {
     jTextArea1.requestFocus();
     JOptionPane.showMessageDialog(null,jTextArea1.getSelectedText());
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    
+    int save=JOptionPane.showConfirmDialog(null, "是否要先存檔?", "新增檔案", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE);
+        if (save==JOptionPane.YES_OPTION) {
+            save=JFileChooser.SAVE_DIALOG;
+        }
+        if(save==JOptionPane.NO_OPTION){
+        jTextArea1.setText("");
+        }
+        
+        if(save==JOptionPane.CANCEL_OPTION){
+        
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
