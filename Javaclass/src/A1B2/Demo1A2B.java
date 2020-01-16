@@ -13,10 +13,16 @@ import java.util.Scanner;
  */
 public class Demo1A2B {
 
+    private static int count = 1;
+
+    public static int getCount() {
+        
+        return count;
+    }
+
     public Demo1A2B() {
         creatAnswer();
     }
-    
 
     public static String creatAnswer() {
         String Ans = "";
@@ -33,7 +39,7 @@ public class Demo1A2B {
     }
 
     public static boolean checkLength(String Guess) {
-        if (Guess.length()!=4) {
+        if (Guess.length() != 4) {
             return false;
         } else {
             return true;
@@ -59,11 +65,11 @@ public class Demo1A2B {
 
     public static boolean checkSameNum(String Guess) {
         boolean checkSameNum = true;
-        //int a=0;
+
         for (int i = 0; i < 3; i++) {
             for (int j = i + 1; j < 4; j++) {
                 if (Guess.charAt(i) == Guess.charAt(j)) {
-                    //a++;
+                    count++;
                     checkSameNum = false;
                 }
             }
@@ -71,9 +77,7 @@ public class Demo1A2B {
         return checkSameNum;
     }
 
-    public static String show1A2B() {
-        String Ans = "";
-        String Guess = "";
+    public static String show1A2B(String Ans, String Guess) {
         int A = 0;
         int B = 0;
 
