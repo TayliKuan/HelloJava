@@ -47,14 +47,17 @@ String Ans = Demo1A2B.creatAnswer();
         String Ans = Demo1A2B.creatAnswer();
         jTextPane1.setText("猜題紀錄");
         jTextField3.setText(Ans);
-
+//not work
     }
+    String A= new String();//讓下面可以再接一個變數
 
     public void CompareAns() {
+                
         String CompareAns = Demo1A2B.show1A2B(Ans, jTextField1.getText());
+              A = A + ("第" + Demo1A2B.getCount() + "次猜數:\t" + jTextField1.getText() + "\n結果:\t" + CompareAns + "\n");
 
-        jTextPane1.setText("第" + Demo1A2B.getCount() + "次猜數:\t" + jTextField1.getText() + "\n結果:\t" + CompareAns + "\n");
-
+        jTextPane1.setText(A);
+            Demo1A2B.count++;//這裡加COUNT
         if (Demo1A2B.show1A2B(Ans, jTextField1.getText()).equals("4A0B")) {
             JOptionPane.showMessageDialog(null, "恭喜答對!");
         }
@@ -138,6 +141,9 @@ String Ans = Demo1A2B.creatAnswer();
 
         jButton2.setText("我猜");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton2MousePressed(evt);
             }
@@ -234,10 +240,14 @@ String Ans = Demo1A2B.creatAnswer();
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        newAnswer();  
+newAnswer();
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments

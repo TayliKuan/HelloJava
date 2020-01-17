@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Demo1A2B {
 
-    private static int count = 1;
+    public static int count = 1;
 
     public static int getCount() {
         
@@ -69,7 +69,7 @@ public class Demo1A2B {
         for (int i = 0; i < 3; i++) {
             for (int j = i + 1; j < 4; j++) {
                 if (Guess.charAt(i) == Guess.charAt(j)) {
-                    count++;
+                    //count++;
                     checkSameNum = false;
                 }
             }
