@@ -31,12 +31,12 @@ class Person2 extends Thread {
                     acct.Account -= i;
                     if (acct.Account != 0) {
                         System.out.println("餘額=" + acct.Account + " >>> " + "可以繼續領錢");
-                    } else {
+                    } else {//等於0的時候 直接通知
                         System.out.println("餘額=" + acct.Account + " >>> " + "沒錢拉");
                     }
-
-                } else {
                     acct.notify();
+                } else {
+
                     try {
                         acct.wait();
                     } catch (InterruptedException ex) {
@@ -77,12 +77,12 @@ class Depositer extends Thread {
     public void depositer(int i) {
         while (true) {            //迴圈
             synchronized (acct) {
-                if (acct.Account == 0) {
-                    acct.Account = 100;
+                if (acct.Account <= 10) {//因為設定領10塊或20塊 所以餘額可能等於0 或等於10
+                    acct.Account = 100;//直接存100
                     System.out.println("存錢>>" + acct.Account + "....." + Thread.currentThread().getName());
-
-                } else {
                     acct.notify();
+                } else {
+
                     try {
                         acct.wait();
                     } catch (InterruptedException ex) {
