@@ -77,7 +77,7 @@ class Depositer extends Thread {
     public void depositer(int i) {
         while (true) {            //迴圈
             synchronized (acct) {
-                if (acct.Account < 10) {
+                if (acct.Account == 0) {
                     acct.Account = 100;
                     System.out.println("存錢>>" + acct.Account + "....." + Thread.currentThread().getName());
 
