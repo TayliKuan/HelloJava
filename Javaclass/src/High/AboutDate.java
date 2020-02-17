@@ -8,7 +8,10 @@ package High;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.chrono.MinguoDate;
 import java.util.Calendar;
 import java.util.Date;
@@ -47,5 +50,16 @@ public class AboutDate {
         LocalDate T = LocalDate.now();
         MinguoDate TD = MinguoDate.from(T);
         System.out.println(TD);
+        System.out.println(T);
+        
+        LocalDateTime UsaPhoenixTime = LocalDateTime.now(ZoneId.of("America/Phoenix")); 
+        System.out.println(UsaPhoenixTime);
+        
+        //比較兩地時區
+        LocalDateTime LDT = LocalDateTime.now();
+        System.out.println(LDT);
+        ZoneId ZID = ZoneId.of("America/Phoenix");
+        ZonedDateTime ZDT = LDT.atZone(ZID);
+        System.out.println(ZDT);
     }
 }

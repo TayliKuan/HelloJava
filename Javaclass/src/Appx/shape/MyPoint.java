@@ -34,7 +34,7 @@ public class MyPoint {
         //設定必經之路 客戶一定會改變 以後這裡就好 
         this.x = x;//沒有this 是0,0 用區域變數 成員變數字進不去
         this.y = y;
-        System.out.println("in mypoint(int x,int y)");
+        System.out.println("in mypoint(int x,int y");
         //print();//都可以呼叫
         count++;//所以可以直接用
     }
@@ -62,5 +62,27 @@ public class MyPoint {
     }
     public String toString(){//包起來
     return "(x,y)@("+this.x+","+this.y+")";
+    }
+    
+    @Override
+    public boolean equals(Object obj){//核對字串內容
+        if (this == obj) 
+            return true;
+            
+        if (!(obj instanceof MyPoint)) 
+                return false;
+                
+        MyPoint pp = (MyPoint)obj;
+        if (this.getX()==pp.getX() && this.getY()==pp.getY()) 
+            return true;
+                    
+        return false;
+                
+    }
+                
+    @Override
+    public int hashCode(){//身分證
+    new Object().hashCode();
+    return new Integer(x).hashCode()+new Integer(y).hashCode();
     }
 }

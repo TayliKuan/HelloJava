@@ -4,7 +4,8 @@ package Appx;
 
 
 public class HisPoint {
-    public void test(){
-    new YourPoint(5);
+    public static int test(){
+    //new YourPoint(5);
+        return 222;
     }
 }

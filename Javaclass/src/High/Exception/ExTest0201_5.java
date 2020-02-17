@@ -8,7 +8,7 @@ package High.Exception;
 import java.io.File;
 import java.io.IOException;
 
-/**
+/**如何建檔
  *
  * @author 小官
  */

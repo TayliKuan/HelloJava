@@ -7,14 +7,14 @@ package High.Exception;
 
 import java.io.File;
 
-/**
+/**印出路徑的這層檔案所有檔名
  *
  * @author 小官
  */
 public class ExTest0201_6 {
     public static void main(String[] args) {
         File f = new File("D:\\123test");
-        printAllPath(f);
+          printAllPath(f);  
     }
     public static void printAllPath(File f){
         

@@ -43,14 +43,15 @@ public class DrawMain extends javax.swing.JFrame {
         int yMin = Math.min(y1, y2);
         int width = xMax - xMin;
         int high = yMax - yMin;
-
-        changeColor(g);
-
+       // int change = changeColor(g).getRGB();
+       // changeColor(g);
+g.setColor(changeColor(g));
         String userChooseShape = (String) jComboBox1.getSelectedItem();
         switch (userChooseShape) {
             case "直線":
 
                 g.drawLine(x1, y1, x2, y2);
+                
                 break;
             case "正方形":
 
@@ -301,14 +302,15 @@ public class DrawMain extends javax.swing.JFrame {
 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         x1 = evt.getX();
-        y1 = evt.getY();// TODO add your handling code here:
+        y1 = evt.getY();
     }//GEN-LAST:event_jPanel1MousePressed
 
     private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
         x2 = evt.getX();
         y2 = evt.getY();
+//拿到顏色
+        DrawShape();
 
-        DrawShape();// TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseReleased
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -319,7 +321,8 @@ public class DrawMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
-
+//        FileChooser f = new FileChooser();
+//        f.setInitialFileName("");
     }//GEN-LAST:event_jMenuItem3MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -328,7 +331,7 @@ public class DrawMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        changeColor(getGraphics());
+       // changeColor(getGraphics());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

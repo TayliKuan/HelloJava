@@ -44,9 +44,9 @@ String Ans = Demo1A2B.creatAnswer();
     }
 
     public void newAnswer() {
-        String Ans = Demo1A2B.creatAnswer();
+        Ans = Demo1A2B.creatAnswer();
         jTextPane1.setText("猜題紀錄");
-        jTextField3.setText(Ans);
+        jTextField3.setText("****");
 //not work
     }
     String A= new String();//讓下面可以再接一個變數

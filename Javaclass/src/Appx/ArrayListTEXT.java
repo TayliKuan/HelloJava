@@ -7,12 +7,13 @@ package Appx;
 
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.List;
 
 /**
  *
  * @author 小官
  */
-public class NewClass0118 {
+public class ArrayListTEXT {
     public static void main(String[] args) {
         System.out.println("Collections");
         
@@ -36,6 +37,8 @@ public class NewClass0118 {
         System.out.println(">>"+ay.indexOf("Hello2"));
         System.out.println(">>"+ay.indexOf("java"));
         System.out.println(">>"+ay.lastIndexOf("java"));
+
+        
         //        Object obj0 = ay.get(0);//位置0
 //        System.out.println("obj 0>>"+obj0);
 //        String str = (String)obj0;
@@ -43,6 +46,7 @@ public class NewClass0118 {
 //        Object obj1 = ay.get(1);
 //        System.out.println("obj 1>>"+obj1);
 //        System.out.println(">>"+ay.size());
+
         ArrayList<String> ay2 = new ArrayList<String>();//<>泛型 寫甚麼型態就要完全一樣 就算是寫<Mypoint>也只能丟Mypoint 他的子類別也不行
         ay2.add("aaa");
         String sss = ay2.get(0);
