@@ -30,7 +30,7 @@ public class Demo {
     //後面test(new Circle());等於p=new Cricle();
     p.print();
     if(p instanceof Circle){
-        System.out.println("yes,is a circle");
+        System.out.println("yes,is a circle元");
     }else{
         System.out.println("not a circle");
     }
