@@ -5,6 +5,7 @@
  */
 package HW;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -29,15 +30,20 @@ public class picnet extends javax.swing.JFrame {
         //方法1
         BufferedImage img = null;
         try {
-            //img = ImageIO.read(new URL("https://img.onl/EnVUph"));
-            img = ImageIO.read(new URL("https://img.onl/sjkSMD"));
-            
+            img = ImageIO.read(new URL("https://img.onl/EnVUph"));
+            // img = ImageIO.read(new URL("https://img.onl/sjkSMD"));
+
             //https://img.onl/    產生URL
         } catch (IOException ex) {
             Logger.getLogger(picOnline.class.getName()).log(Level.SEVERE, null, ex);
         }
         ImageIcon icon = new ImageIcon(img);
+        Image image = icon.getImage(); // transform it 
+        Image newimg = image.getScaledInstance(120, 120, java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+        icon = new ImageIcon(newimg);  // transform it back
+
         jLabel1.setIcon(icon);//不會動GIF
+
 
         //方法二
 //            URL url = new URL("https://img.onl/EnVUph");
@@ -60,6 +66,7 @@ public class picnet extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("jLabel1");
+        jLabel1.setName(""); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

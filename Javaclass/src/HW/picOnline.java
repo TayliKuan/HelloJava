@@ -28,15 +28,13 @@ public class picOnline extends javax.swing.JFrame {
         initComponents();
         BufferedImage img = null;
         try {
-            //img = ImageIO.read(new URL("https://irlen.com/wp-content/uploads/2015/09/world-map-large.png"));
             img = ImageIO.read(new File("d://p3.gif"));
         } catch (IOException ex) {
             Logger.getLogger(picOnline.class.getName()).log(Level.SEVERE, null, ex);
         }
         ImageIcon icon = new ImageIcon(img);
-//        JLabel lb = new JLabel();
-//        lb.setIcon(icon);
         jLabel1.setIcon(icon);//不會動GIF
+       
     }
 
     /**
