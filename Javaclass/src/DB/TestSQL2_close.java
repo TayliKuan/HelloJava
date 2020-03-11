@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package High;
+package DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,12 +15,12 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 小官
+ * @author 小官 離開try catch就會自己消失
  */
-public class TestOther {
+public class TestSQL2_close {
      public static void main(String[] args) {
         System.out.println("你好");
-        try (Connection conn = DriverManager.getConnection("jdbc:derby://192.168.1.214:1527/sample;user=app;password=app");){
+        try (Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/sample;user=app;password=app");){
         //離開try catch就會關掉conn了
             System.out.println("connect ok");
             Statement st = conn.createStatement();

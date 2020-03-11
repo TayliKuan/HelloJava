@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package High;
+package DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,22 +18,18 @@ import java.util.logging.Logger;
  *
  * @author 小官
  */
-public class TestSQL2_close {
-     public static void main(String[] args) {
+public class TestDB_creat {
+    public static void main(String[] args) {
         System.out.println("你好");
-        try (Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/sample;user=app;password=app");){
-        //離開try catch就會關掉conn了
-            System.out.println("connect ok");
-            Statement st = conn.createStatement();
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://45.56.120.21:3306/orangeV2", "tofranklu", "1qaz@WSX");) {
 
-            ResultSet rs = st.executeQuery("SELECT * FROM APP.CUSTOMER");
-            System.out.println("----");
-            while (rs.next()) {
-                System.out.println("ID:= " + rs.getString("CUSTOMER_ID") + " ,CODE=" + rs.getString(2) + " ,Name=" + rs.getString("NAME"));
-            }
+            Statement st = conn.createStatement();
+            
+            int result = st.executeUpdate("update campaign_config set end_time = '"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"'where id =110");
+
+            System.out.println("connect ok " + result);
         } catch (SQLException ex) {
             Logger.getLogger(TestSQL.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
 }

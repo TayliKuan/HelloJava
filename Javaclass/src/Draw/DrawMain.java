@@ -27,12 +27,15 @@ public class DrawMain extends javax.swing.JFrame {
         initComponents();
 
     }
+public static java.awt.Color setColor(){
+        
+    return null;
 
-    public static java.awt.Color changeColor(Graphics g) {
-        java.awt.Color c = JColorChooser.showDialog(null, "請選擇鉛筆顏色", java.awt.Color.BLACK);
-
-        g.setColor(c);
-        return c;
+}
+    public static java.awt.Color chnageColor(Graphics g) {
+        java.awt.Color chooseC = JColorChooser.showDialog(null, "請選擇鉛筆顏色", java.awt.Color.BLACK);
+        //g.setColor(c);
+        return chooseC;
     }
 
     public void DrawShape() {
@@ -44,12 +47,13 @@ public class DrawMain extends javax.swing.JFrame {
         int width = xMax - xMin;
         int high = yMax - yMin;
        // int change = changeColor(g).getRGB();
-       // changeColor(g);
-g.setColor(changeColor(g));
+        //chnageColor(g);
+        
+//g.setColor(changeColor(g));
         String userChooseShape = (String) jComboBox1.getSelectedItem();
         switch (userChooseShape) {
             case "直線":
-
+g.setColor(java.awt.Color.red);
                 g.drawLine(x1, y1, x2, y2);
                 
                 break;
@@ -69,7 +73,6 @@ g.setColor(changeColor(g));
 
                 g.drawOval(x1, y1, width, high);
                 break;
-
         }
 
     }
