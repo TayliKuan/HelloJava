@@ -25,8 +25,9 @@ public class TestBook {
     public static void main(String[] args) throws IOException  {
 
         String Final = null;
-        try {//https://www.tohomh123.com/yinghuo/1.html //編號0001開始 會少最後一張
-            URL url = new URL("https://www.tohomh123.com/duziyirendeyishijiegonglve/13.html");
+        try {//https://www.tohomh123.com/yinghuo/1.html //編號0000開始 會少第一張 
+            //此網站有些 0000開始 有些0001開始
+            URL url = new URL("https://www.tohomh123.com/paiqiushaonian/374.html");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             StringBuilder sb = new StringBuilder();
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(
@@ -98,7 +99,7 @@ public class TestBook {
             InputStream is = conn.getInputStream();
             FileOutputStream fos = new FileOutputStream(file);
 
-            int length=0;
+            int length=0;//總資料大小
             byte[] b = new byte[4096*5];
             while ((length = is.read(b)) != -1) {
                 fos.write(b, 0, length);
