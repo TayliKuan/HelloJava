@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package A1B2;
+package A2B2;
 
-import A1B2.Demo1A2B;
+import A2B2.Demo1A2B;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.*;
