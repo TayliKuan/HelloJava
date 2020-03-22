@@ -19,7 +19,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Driver {
-
     public String getSearchResult(String title) {//收到使用者輸入的片名
         String responseBody = null;//這API跑完會回傳這個
         try (final CloseableHttpClient httpclient = HttpClients.createDefault()) {
